@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A73A18E22C0FAC290095A5DB /* iplayyoulistenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A18E12C0FAC290095A5DB /* iplayyoulistenApp.swift */; };
-		A73A18E42C0FAC290095A5DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A18E32C0FAC290095A5DB /* ContentView.swift */; };
 		A73A18E62C0FAC2A0095A5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73A18E52C0FAC2A0095A5DB /* Assets.xcassets */; };
 		A73A18EA2C0FAC2A0095A5DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73A18E92C0FAC2A0095A5DB /* Preview Assets.xcassets */; };
 		A760B06B2C0FB0EF00FF82D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A760B06A2C0FB0EF00FF82D4 /* GoogleService-Info.plist */; };
@@ -40,16 +39,34 @@
 		A760B0A12C0FB16000FF82D4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A760B0A02C0FB16000FF82D4 /* FirebaseStorage */; };
 		A760B0A32C0FB16000FF82D4 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A760B0A22C0FB16000FF82D4 /* FirebaseStorageCombine-Community */; };
 		A760B0A52C0FB16000FF82D4 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = A760B0A42C0FB16000FF82D4 /* FirebaseVertexAI-Preview */; };
+		A7CB58202C109CFA00C773AA /* SongOfTheDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB581F2C109CFA00C773AA /* SongOfTheDayView.swift */; };
+		A7CB58242C109F8500C773AA /* SongOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58232C109F8500C773AA /* SongOfTheDay.swift */; };
+		A7CB58262C10A17A00C773AA /* DisplaySongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58252C10A17A00C773AA /* DisplaySongCell.swift */; };
+		A7CB58292C10A1CB00C773AA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A7CB58282C10A1CB00C773AA /* Kingfisher */; };
+		A7CB582B2C10B6C400C773AA /* ExplicitTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB582A2C10B6C400C773AA /* ExplicitTag.swift */; };
+		A7CB582D2C10BC6A00C773AA /* SpotifyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB582C2C10BC6A00C773AA /* SpotifyIcon.swift */; };
+		A7CB582F2C10BCC100C773AA /* AppleMusicIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB582E2C10BCC100C773AA /* AppleMusicIcon.swift */; };
+		A7CB58332C10CC9200C773AA /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58322C10CC9200C773AA /* FetchService.swift */; };
+		A7CB58352C10D32700C773AA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58342C10D32700C773AA /* AuthService.swift */; };
+		A7CB58372C10DAD400C773AA /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58362C10DAD400C773AA /* HistoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A73A18DE2C0FAC290095A5DB /* iplayyoulisten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iplayyoulisten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73A18E12C0FAC290095A5DB /* iplayyoulistenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iplayyoulistenApp.swift; sourceTree = "<group>"; };
-		A73A18E32C0FAC290095A5DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A73A18E52C0FAC2A0095A5DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A73A18E72C0FAC2A0095A5DB /* iplayyoulisten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iplayyoulisten.entitlements; sourceTree = "<group>"; };
 		A73A18E92C0FAC2A0095A5DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A760B06A2C0FB0EF00FF82D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A7CB581F2C109CFA00C773AA /* SongOfTheDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongOfTheDayView.swift; sourceTree = "<group>"; };
+		A7CB58232C109F8500C773AA /* SongOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongOfTheDay.swift; sourceTree = "<group>"; };
+		A7CB58252C10A17A00C773AA /* DisplaySongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySongCell.swift; sourceTree = "<group>"; };
+		A7CB582A2C10B6C400C773AA /* ExplicitTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitTag.swift; sourceTree = "<group>"; };
+		A7CB582C2C10BC6A00C773AA /* SpotifyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyIcon.swift; sourceTree = "<group>"; };
+		A7CB582E2C10BCC100C773AA /* AppleMusicIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicIcon.swift; sourceTree = "<group>"; };
+		A7CB58322C10CC9200C773AA /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
+		A7CB58342C10D32700C773AA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A7CB58362C10DAD400C773AA /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +82,7 @@
 				A760B0712C0FB16000FF82D4 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				A760B08B2C0FB16000FF82D4 /* FirebaseFirestoreSwift in Frameworks */,
 				A760B0992C0FB16000FF82D4 /* FirebaseMLModelDownloader in Frameworks */,
+				A7CB58292C10A1CB00C773AA /* Kingfisher in Frameworks */,
 				A760B0772C0FB16000FF82D4 /* FirebaseAppCheck in Frameworks */,
 				A760B0752C0FB16000FF82D4 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				A760B0972C0FB16000FF82D4 /* FirebaseMessaging in Frameworks */,
@@ -111,11 +129,12 @@
 		A73A18E02C0FAC290095A5DB /* iplayyoulisten */ = {
 			isa = PBXGroup;
 			children = (
-				A73A18E12C0FAC290095A5DB /* iplayyoulistenApp.swift */,
-				A73A18E32C0FAC290095A5DB /* ContentView.swift */,
-				A73A18E52C0FAC2A0095A5DB /* Assets.xcassets */,
 				A73A18E72C0FAC2A0095A5DB /* iplayyoulisten.entitlements */,
 				A760B06A2C0FB0EF00FF82D4 /* GoogleService-Info.plist */,
+				A73A18E12C0FAC290095A5DB /* iplayyoulistenApp.swift */,
+				A73A18E52C0FAC2A0095A5DB /* Assets.xcassets */,
+				A7CB58182C109C9700C773AA /* App */,
+				A7CB58192C109C9A00C773AA /* Background */,
 				A73A18E82C0FAC2A0095A5DB /* Preview Content */,
 			);
 			path = iplayyoulisten;
@@ -134,6 +153,69 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7CB58182C109C9700C773AA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A7CB581B2C109CA600C773AA /* Components */,
+				A7CB581A2C109CA100C773AA /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A7CB58192C109C9A00C773AA /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				A7CB581D2C109CB400C773AA /* Models */,
+				A7CB581C2C109CAE00C773AA /* Service */,
+				A7CB581E2C109CC500C773AA /* Utilities */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		A7CB581A2C109CA100C773AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7CB581F2C109CFA00C773AA /* SongOfTheDayView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7CB581B2C109CA600C773AA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A7CB58252C10A17A00C773AA /* DisplaySongCell.swift */,
+				A7CB582A2C10B6C400C773AA /* ExplicitTag.swift */,
+				A7CB582C2C10BC6A00C773AA /* SpotifyIcon.swift */,
+				A7CB582E2C10BCC100C773AA /* AppleMusicIcon.swift */,
+				A7CB58362C10DAD400C773AA /* HistoryCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A7CB581C2C109CAE00C773AA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A7CB58322C10CC9200C773AA /* FetchService.swift */,
+				A7CB58342C10D32700C773AA /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A7CB581D2C109CB400C773AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7CB58232C109F8500C773AA /* SongOfTheDay.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A7CB581E2C109CC500C773AA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +263,7 @@
 				A760B0A02C0FB16000FF82D4 /* FirebaseStorage */,
 				A760B0A22C0FB16000FF82D4 /* FirebaseStorageCombine-Community */,
 				A760B0A42C0FB16000FF82D4 /* FirebaseVertexAI-Preview */,
+				A7CB58282C10A1CB00C773AA /* Kingfisher */,
 			);
 			productName = iplayyoulisten;
 			productReference = A73A18DE2C0FAC290095A5DB /* iplayyoulisten.app */;
@@ -212,6 +295,7 @@
 			mainGroup = A73A18D52C0FAC290095A5DB;
 			packageReferences = (
 				A760B06C2C0FB11500FF82D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A7CB58272C10A1CB00C773AA /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = A73A18DF2C0FAC290095A5DB /* Products */;
 			projectDirPath = "";
@@ -240,8 +324,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A73A18E42C0FAC290095A5DB /* ContentView.swift in Sources */,
+				A7CB58332C10CC9200C773AA /* FetchService.swift in Sources */,
+				A7CB58202C109CFA00C773AA /* SongOfTheDayView.swift in Sources */,
+				A7CB582B2C10B6C400C773AA /* ExplicitTag.swift in Sources */,
+				A7CB58352C10D32700C773AA /* AuthService.swift in Sources */,
+				A7CB58372C10DAD400C773AA /* HistoryCell.swift in Sources */,
+				A7CB582F2C10BCC100C773AA /* AppleMusicIcon.swift in Sources */,
+				A7CB58262C10A17A00C773AA /* DisplaySongCell.swift in Sources */,
+				A7CB582D2C10BC6A00C773AA /* SpotifyIcon.swift in Sources */,
 				A73A18E22C0FAC290095A5DB /* iplayyoulistenApp.swift in Sources */,
+				A7CB58242C109F8500C773AA /* SongOfTheDay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +467,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "you listen";
+				INFOPLIST_KEY_CFBundleDisplayName = iplayyoulisten;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -416,7 +508,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "you listen";
+				INFOPLIST_KEY_CFBundleDisplayName = iplayyoulisten;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -474,6 +566,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.27.0;
+			};
+		};
+		A7CB58272C10A1CB00C773AA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -618,6 +718,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A760B06C2C0FB11500FF82D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseVertexAI-Preview";
+		};
+		A7CB58282C10A1CB00C773AA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A7CB58272C10A1CB00C773AA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

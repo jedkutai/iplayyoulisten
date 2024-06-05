@@ -24,7 +24,7 @@ struct iplayyoulistenApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SongOfTheDayView()
         }
     }
 }
