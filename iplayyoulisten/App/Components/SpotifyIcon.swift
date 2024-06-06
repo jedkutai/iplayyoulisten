@@ -12,7 +12,7 @@ struct SpotifyIcon: View {
         Image("spotify icon")
             .resizable()
             .scaledToFit()
-            .frame(width: 50, height: 50)
+            
     }
 }
 

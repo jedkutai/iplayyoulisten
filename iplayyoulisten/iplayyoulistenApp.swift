@@ -25,6 +25,7 @@ struct iplayyoulistenApp: App {
     var body: some Scene {
         WindowGroup {
             SongOfTheDayView()
+                .tint(Color(.systemPink))
         }
     }
 }

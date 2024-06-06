@@ -12,6 +12,7 @@ struct DisplaySongCell: View {
     let songOfTheDay: SongOfTheDay
     
     let maxArtworkHeight: CGFloat = UIScreen.main.bounds.width
+    let iconDimension: CGFloat = 50
     
     @State private var showDetails = false
     @Environment(\.colorScheme) var colorScheme
@@ -23,11 +24,12 @@ struct DisplaySongCell: View {
                 Text(artist)
                     .font(.title.weight(.bold))
                     .foregroundStyle(colorScheme == .dark ? .white : .black)
+                    .lineLimit(1)
                     .minimumScaleFactor(0.1)
             }
             
             Button {
-                if let details = songOfTheDay.details {
+                if songOfTheDay.details != nil {
                     showDetails.toggle()
                 }
             } label: {
@@ -57,21 +59,21 @@ struct DisplaySongCell: View {
             
             if let title = songOfTheDay.title {
                 HStack {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            
-                            Text(title)
-                                .font(.title2.weight(.semibold))
-                                .foregroundStyle(colorScheme == .dark ? .white : .black)
-                            
-                            if let explicit = songOfTheDay.explicit {
-                                if explicit {
-                                    ExplicitTag()
-                                }
-                            }
+                    
+                    Text(title)
+                        .font(.title2.weight(.semibold))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.1)
+                        .foregroundStyle(colorScheme == .dark ? .white : .black)
+                    
+                    if let explicit = songOfTheDay.explicit {
+                        if explicit {
+                            ExplicitTag()
+                                .frame(width: 20)
                         }
                     }
-                    .frame(height: 25)
+                    
+                    Spacer()
                 }
                 .padding(.horizontal)
             }
@@ -81,6 +83,8 @@ struct DisplaySongCell: View {
                     Text(album)
                         .font(.title3)
                         .foregroundStyle(colorScheme == .dark ? .white : .black)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.1)
                     
                     Spacer()
                 }
@@ -98,6 +102,7 @@ struct DisplaySongCell: View {
                     if let url = URL(string: spotifyLink) {
                         Link(destination: url) {
                             SpotifyIcon()
+                                .frame(width: iconDimension, height: iconDimension)
                         }
                     }
                 }
@@ -106,6 +111,7 @@ struct DisplaySongCell: View {
                     if let url = URL(string: appleMusicLink) {
                         Link(destination: url) {
                             AppleMusicIcon()
+                                .frame(width: iconDimension, height: iconDimension)
                         }
                     }
                 }
@@ -119,10 +125,20 @@ struct DisplaySongCell: View {
                     Text("\(title) by \(artist)")
                         .font(.title.weight(.semibold))
                         .foregroundStyle(colorScheme == .dark ? .white : .black)
+                        .lineLimit(1)
                         .minimumScaleFactor(0.1)
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.top)
                 }
-                    
+                 
+                if let releaseYear = songOfTheDay.releaseYear, let genre = songOfTheDay.genre {
+                    Text("\(releaseYear) - \(genre.capitalized)")
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.1)
+                        .foregroundStyle(Color(.systemPink))
+                        .padding(.horizontal)
+                        .padding(.bottom)
+                }
                 
                 ScrollView(.vertical) {
                     if let details = songOfTheDay.details {
@@ -132,6 +148,7 @@ struct DisplaySongCell: View {
                             .padding(.horizontal)
                     }
                 }
+                
             }
         }
     }

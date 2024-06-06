@@ -17,7 +17,7 @@ struct SongOfTheDay: Identifiable, Codable, Hashable {
     var details: String?
     var explicit: Bool?
     var genre: String?
-    var releaseDate: Int?
+    var releaseYear: Int?
     var spotifyLink: String?
     var title: String?
 }
@@ -32,7 +32,7 @@ extension SongOfTheDay {
         details: "\"IPlayYouListen\" is a mesmerizing track by ODESZA, a Seattle-based electronic music duo known for their innovative blend of dreamy synths, intricate beats, and emotive melodies. This song is a standout piece from their debut album, Summer's Gone, which captures the essence of nostalgic summers with its lush soundscapes and evocative rhythms. \"IPlayYouListen\" exemplifies ODESZA's ability to create immersive auditory experiences, making it a favorite among fans for its hypnotic progression and ethereal atmosphere. Whether you're relaxing or seeking inspiration, this track is sure to transport you to a world of sonic bliss.",
         explicit: false,
         genre: "Electronic",
-        releaseDate: 2012,
+        releaseYear: 2012,
         spotifyLink: "https://open.spotify.com/track/3xhR3mClWXydDCByJxnOwY?si=9587bd9b5d5a48c2",
         title: "IPlayYouListen"
     )

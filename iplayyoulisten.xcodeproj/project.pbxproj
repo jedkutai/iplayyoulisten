@@ -49,6 +49,7 @@
 		A7CB58332C10CC9200C773AA /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58322C10CC9200C773AA /* FetchService.swift */; };
 		A7CB58352C10D32700C773AA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58342C10D32700C773AA /* AuthService.swift */; };
 		A7CB58372C10DAD400C773AA /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58362C10DAD400C773AA /* HistoryCell.swift */; };
+		A7CB58392C11281D00C773AA /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58382C11281D00C773AA /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		A7CB58322C10CC9200C773AA /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 		A7CB58342C10D32700C773AA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A7CB58362C10DAD400C773AA /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		A7CB58382C11281D00C773AA /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		A7CB583A2C1132EC00C773AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,7 @@
 		A73A18E02C0FAC290095A5DB /* iplayyoulisten */ = {
 			isa = PBXGroup;
 			children = (
+				A7CB583A2C1132EC00C773AA /* Info.plist */,
 				A73A18E72C0FAC2A0095A5DB /* iplayyoulisten.entitlements */,
 				A760B06A2C0FB0EF00FF82D4 /* GoogleService-Info.plist */,
 				A73A18E12C0FAC290095A5DB /* iplayyoulistenApp.swift */,
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				A7CB581F2C109CFA00C773AA /* SongOfTheDayView.swift */,
+				A7CB58382C11281D00C773AA /* HistoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				A7CB582B2C10B6C400C773AA /* ExplicitTag.swift in Sources */,
 				A7CB58352C10D32700C773AA /* AuthService.swift in Sources */,
 				A7CB58372C10DAD400C773AA /* HistoryCell.swift in Sources */,
+				A7CB58392C11281D00C773AA /* HistoryView.swift in Sources */,
 				A7CB582F2C10BCC100C773AA /* AppleMusicIcon.swift in Sources */,
 				A7CB58262C10A17A00C773AA /* DisplaySongCell.swift in Sources */,
 				A7CB582D2C10BC6A00C773AA /* SpotifyIcon.swift in Sources */,
@@ -467,7 +473,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = iplayyoulisten;
+				INFOPLIST_FILE = iplayyoulisten/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iplay;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -508,7 +515,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = iplayyoulisten;
+				INFOPLIST_FILE = iplayyoulisten/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iplay;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

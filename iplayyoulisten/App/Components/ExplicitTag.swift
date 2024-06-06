@@ -12,7 +12,6 @@ struct ExplicitTag: View {
         Image(systemName: "e.square.fill")
             .resizable()
             .scaledToFit()
-            .frame(width: 20)
             .foregroundStyle(Color(.systemPink))
     }
 }

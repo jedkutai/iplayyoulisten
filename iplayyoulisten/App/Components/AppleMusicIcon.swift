@@ -13,7 +13,6 @@ struct AppleMusicIcon: View {
             .resizable()
             .scaledToFit()
             .clipShape(Circle())
-            .frame(width: 50, height: 50)
     }
 }
 

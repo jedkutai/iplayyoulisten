@@ -26,4 +26,17 @@ struct FetchService {
         
         return songOfTheDay
     }
+    
+    static func fetchLast30SongsOfTheDay() async throws -> [SongOfTheDay] {
+        var last30Songs: [SongOfTheDay] = []
+        
+        let snapshot = try await Firestore.firestore().collection("songs")
+            .order(by: "id", descending: true)
+            .limit(to: 30)
+            .getDocuments()
+        
+        last30Songs = snapshot.documents.compactMap({ try? $0.data(as: SongOfTheDay.self) })
+        
+        return last30Songs
+    }
 }

@@ -32,7 +32,7 @@ struct SongOfTheDayView: View {
             .toolbar {
                 NavigationLink {
                     // history
-                    
+                    HistoryView()
                 } label: {
                     Image(systemName: "clock.arrow.circlepath")
                         .foregroundStyle(colorScheme == .dark ? .white : .black)
