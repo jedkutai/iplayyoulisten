@@ -10,33 +10,46 @@ import Firebase
 import FirebaseFirestore
 
 struct FetchService {
-    static func fetchSongOfTheDay() async throws -> SongOfTheDay? {
-        var songOfTheDay: SongOfTheDay?
+    static func fetchTodaysPuzzle() async throws -> PuzzleModel? {
+        var puzzle: PuzzleModel?
         
-        let snapshot = try await Firestore.firestore().collection("songs")
-            .order(by: "id", descending: true)
+        let currentTimestamp = Date.now
+        
+        let snapshot = try await Firestore.firestore().collection("puzzles")
+            .whereField("startTime", isLessThanOrEqualTo: currentTimestamp)
+            .whereField("endTime", isGreaterThan: currentTimestamp)
             .limit(to: 1)
             .getDocuments()
         
-        let songs = snapshot.documents.compactMap({ try? $0.data(as: SongOfTheDay.self) })
+        let puzzles = snapshot.documents.compactMap({ try? $0.data(as: PuzzleModel.self) })
         
-        if let firstSong = songs.first {
-            songOfTheDay = firstSong
+        if let firstPuzzle = puzzles.first {
+            puzzle = firstPuzzle
         }
         
-        return songOfTheDay
+        return puzzle
     }
     
-    static func fetchLast30SongsOfTheDay() async throws -> [SongOfTheDay] {
-        var last30Songs: [SongOfTheDay] = []
+    static func fetchPuzzleById(id: String) async throws -> PuzzleModel {
+        let snapshot = try await Firestore.firestore().collection("puzzles").document(id).getDocument()
+        return try snapshot.data(as: PuzzleModel.self)
+    }
+    
+    
+    static func fetchAlbumById(id: String) async throws -> AlbumModel {
+        let snapshot = try await Firestore.firestore().collection("albums").document(id).getDocument()
+        return try snapshot.data(as: AlbumModel.self)
+    }
+    
+    static func fetchAlbumsByPuzzle(puzzle: PuzzleModel) async throws -> [AlbumModel] {
+        var albums: [AlbumModel] = []
         
-        let snapshot = try await Firestore.firestore().collection("songs")
-            .order(by: "id", descending: true)
-            .limit(to: 30)
-            .getDocuments()
+        for id in puzzle.albumIds {
+            
+            let fetchedAlbum = try await self.fetchAlbumById(id: id)
+            albums.append(fetchedAlbum)
+        }
         
-        last30Songs = snapshot.documents.compactMap({ try? $0.data(as: SongOfTheDay.self) })
-        
-        return last30Songs
+        return albums
     }
 }

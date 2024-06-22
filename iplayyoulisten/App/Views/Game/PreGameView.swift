@@ -23,7 +23,7 @@ struct PreGameView: View {
                         Button {
                             self.onAppearActions()
                         } label: {
-                            Text("Spin the block")
+                            TapToReloadLabel()
                         }
                     } else {
                         ProgressView()
@@ -56,42 +56,49 @@ struct PreGameView: View {
 private struct PreGameLoadedView: View {
     let puzzle: PuzzleModel
     
-    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var x: X
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
                 if x.lastPuzzlePlayedId == puzzle.id {
+                    Spacer()
                     
-                    Text("Next Puzzle At:")
+                    Text("Next Puzzle:")
                         .font(.title.weight(.semibold))
-                        .foregroundStyle(colorScheme == .dark ? .white : .black)
+                        .foregroundStyle(.black)
+                        .lineLimit(1)
                         .minimumScaleFactor(0.1)
                     
                     
                     Text(puzzle.endTime.dateValue().formatted(date: .abbreviated, time: .shortened))
                         .font(.title.weight(.semibold))
                         .foregroundStyle(Color(.systemGray))
+                        .lineLimit(1)
                         .minimumScaleFactor(0.1)
+                    
+                    Spacer()
+                    
+                    Text("You can't play a puzzle more than once.")
+                        .font(.subheadline)
+                        .foregroundStyle(.black)
+                        .multilineTextAlignment(.center)
                     
                 } else {
                     NavigationLink {
-                        
+                        GameController(puzzle: puzzle).navigationBarBackButtonHidden()
                     } label: {
                         Text("Start")
                             .font(.title.weight(.semibold))
-                            .foregroundStyle(colorScheme == .dark ? .white : .black)
+                            .foregroundStyle(.black)
+                            .lineLimit(1)
                             .minimumScaleFactor(0.1)
                     }
                     
                     Text("Once you start today's puzzle, you can't replay it.")
                         .font(.subheadline)
-                        .foregroundStyle(Color(.systemRed))
+                        .foregroundStyle(.black)
                         .multilineTextAlignment(.center)
                     
-//                    ForEach(puzzle.albumIds, id: \.self) { id in
-//                        Text(id)
-//                    }
                 }
             }
         }

@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct DisplayAlbumTitle: View {
+    let title: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(title)
+            .font(.title.weight(.bold))
+            .foregroundStyle(.black)
+            .lineLimit(1)
+            .minimumScaleFactor(0.1)
     }
 }
 
 #Preview {
-    DisplayAlbumTitle()
+    DisplayAlbumTitle(title: "Album Title")
 }

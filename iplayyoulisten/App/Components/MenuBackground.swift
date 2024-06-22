@@ -9,7 +9,25 @@ import SwiftUI
 
 struct MenuBackground: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color(.white)
+            
+            LinearGradient(
+                colors: [
+                    CustomColors.purlpe2,
+                    CustomColors.purlpe1
+//                    Color(.white),
+//                    CustomColors.cream
+                    
+                ],
+                startPoint: .top, endPoint: .bottom
+            )
+            
+            Rectangle()
+                .foregroundStyle(.ultraThinMaterial)
+                
+        }
+        .ignoresSafeArea()
     }
 }
 

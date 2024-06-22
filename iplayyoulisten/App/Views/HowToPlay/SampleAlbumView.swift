@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct SampleAlbumView: View {
+    let album: AlbumModel = AlbumModel.albums[0]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            DisplayAlbumGenreAndYear(genre: album.genre, year: album.releaseYear)
+            
+            DisplayArtwork(artworkUrl: album.artworkUrl)
+                .shadow(radius: 5)
+    
+            DisplayAlbumTitle(title: album.title)
+            
+            PuzzleHint(artistName: album.artist)
+                .padding(.top)
+        }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundStyle(.ultraThinMaterial)
+        )
     }
 }
 

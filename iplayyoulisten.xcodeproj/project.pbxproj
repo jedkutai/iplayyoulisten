@@ -39,17 +39,33 @@
 		A760B0A12C0FB16000FF82D4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A760B0A02C0FB16000FF82D4 /* FirebaseStorage */; };
 		A760B0A32C0FB16000FF82D4 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A760B0A22C0FB16000FF82D4 /* FirebaseStorageCombine-Community */; };
 		A760B0A52C0FB16000FF82D4 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = A760B0A42C0FB16000FF82D4 /* FirebaseVertexAI-Preview */; };
-		A7CB58202C109CFA00C773AA /* SongOfTheDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB581F2C109CFA00C773AA /* SongOfTheDayView.swift */; };
-		A7CB58242C109F8500C773AA /* SongOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58232C109F8500C773AA /* SongOfTheDay.swift */; };
-		A7CB58262C10A17A00C773AA /* DisplaySongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58252C10A17A00C773AA /* DisplaySongCell.swift */; };
+		A761AA532C12F46C004E634D /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = A761AA522C12F46C004E634D /* SwiftUIX */; };
+		A7943A7B2C234E290078852F /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A7A2C234E290078852F /* GameController.swift */; };
+		A7943A7F2C23747D0078852F /* TapToReloadLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A7E2C23747D0078852F /* TapToReloadLabel.swift */; };
+		A7943A812C2377F50078852F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A802C2377F50078852F /* GameView.swift */; };
+		A7943A852C2397DF0078852F /* DisplayArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A842C2397DF0078852F /* DisplayArtwork.swift */; };
+		A7943A872C239BD60078852F /* DisplayAlbumTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A862C239BD60078852F /* DisplayAlbumTitle.swift */; };
+		A7943A892C239DA80078852F /* DisplayAlbumGenreAndYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A882C239DA80078852F /* DisplayAlbumGenreAndYear.swift */; };
+		A7943A8B2C23A4070078852F /* PuzzleHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A8A2C23A4070078852F /* PuzzleHint.swift */; };
+		A7943A8D2C23D7100078852F /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A8C2C23D7100078852F /* AlbumView.swift */; };
+		A7943A8F2C24480A0078852F /* DisplayArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A8E2C24480A0078852F /* DisplayArtist.swift */; };
+		A7943A912C2463F50078852F /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A902C2463F50078852F /* ResultsView.swift */; };
+		A7943A932C246FAB0078852F /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A922C246FAB0078852F /* ResultCell.swift */; };
+		A7943A962C247A850078852F /* SampleAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A952C247A850078852F /* SampleAlbumView.swift */; };
 		A7CB58292C10A1CB00C773AA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A7CB58282C10A1CB00C773AA /* Kingfisher */; };
-		A7CB582B2C10B6C400C773AA /* ExplicitTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB582A2C10B6C400C773AA /* ExplicitTag.swift */; };
 		A7CB582D2C10BC6A00C773AA /* SpotifyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB582C2C10BC6A00C773AA /* SpotifyIcon.swift */; };
 		A7CB582F2C10BCC100C773AA /* AppleMusicIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB582E2C10BCC100C773AA /* AppleMusicIcon.swift */; };
 		A7CB58332C10CC9200C773AA /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58322C10CC9200C773AA /* FetchService.swift */; };
 		A7CB58352C10D32700C773AA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58342C10D32700C773AA /* AuthService.swift */; };
-		A7CB58372C10DAD400C773AA /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58362C10DAD400C773AA /* HistoryCell.swift */; };
-		A7CB58392C11281D00C773AA /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58382C11281D00C773AA /* HistoryView.swift */; };
+		A7EB1A662C21EDA90086D111 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A652C21EDA90086D111 /* MainMenuView.swift */; };
+		A7EB1A6A2C22007C0086D111 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A692C22007C0086D111 /* CustomColors.swift */; };
+		A7EB1A6E2C2203340086D111 /* MenuBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A6D2C2203340086D111 /* MenuBackground.swift */; };
+		A7EB1A742C2233EA0086D111 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A732C2233EA0086D111 /* AlbumModel.swift */; };
+		A7EB1A762C2233F10086D111 /* PuzzleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A752C2233F10086D111 /* PuzzleModel.swift */; };
+		A7EB1A782C2237340086D111 /* X.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A772C2237340086D111 /* X.swift */; };
+		A7EB1A7A2C223AED0086D111 /* HowToPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A792C223AED0086D111 /* HowToPlayView.swift */; };
+		A7EB1A7C2C223C460086D111 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A7B2C223C460086D111 /* ContentView.swift */; };
+		A7EB1A7E2C22632D0086D111 /* PreGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A7D2C22632D0086D111 /* PreGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,17 +75,32 @@
 		A73A18E72C0FAC2A0095A5DB /* iplayyoulisten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iplayyoulisten.entitlements; sourceTree = "<group>"; };
 		A73A18E92C0FAC2A0095A5DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A760B06A2C0FB0EF00FF82D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A7CB581F2C109CFA00C773AA /* SongOfTheDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongOfTheDayView.swift; sourceTree = "<group>"; };
-		A7CB58232C109F8500C773AA /* SongOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongOfTheDay.swift; sourceTree = "<group>"; };
-		A7CB58252C10A17A00C773AA /* DisplaySongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySongCell.swift; sourceTree = "<group>"; };
-		A7CB582A2C10B6C400C773AA /* ExplicitTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitTag.swift; sourceTree = "<group>"; };
+		A7943A7A2C234E290078852F /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		A7943A7E2C23747D0078852F /* TapToReloadLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToReloadLabel.swift; sourceTree = "<group>"; };
+		A7943A802C2377F50078852F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		A7943A842C2397DF0078852F /* DisplayArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayArtwork.swift; sourceTree = "<group>"; };
+		A7943A862C239BD60078852F /* DisplayAlbumTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAlbumTitle.swift; sourceTree = "<group>"; };
+		A7943A882C239DA80078852F /* DisplayAlbumGenreAndYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAlbumGenreAndYear.swift; sourceTree = "<group>"; };
+		A7943A8A2C23A4070078852F /* PuzzleHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleHint.swift; sourceTree = "<group>"; };
+		A7943A8C2C23D7100078852F /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		A7943A8E2C24480A0078852F /* DisplayArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayArtist.swift; sourceTree = "<group>"; };
+		A7943A902C2463F50078852F /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		A7943A922C246FAB0078852F /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		A7943A952C247A850078852F /* SampleAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAlbumView.swift; sourceTree = "<group>"; };
 		A7CB582C2C10BC6A00C773AA /* SpotifyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyIcon.swift; sourceTree = "<group>"; };
 		A7CB582E2C10BCC100C773AA /* AppleMusicIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicIcon.swift; sourceTree = "<group>"; };
 		A7CB58322C10CC9200C773AA /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 		A7CB58342C10D32700C773AA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		A7CB58362C10DAD400C773AA /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
-		A7CB58382C11281D00C773AA /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		A7CB583A2C1132EC00C773AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A7EB1A652C21EDA90086D111 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		A7EB1A692C22007C0086D111 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		A7EB1A6D2C2203340086D111 /* MenuBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackground.swift; sourceTree = "<group>"; };
+		A7EB1A732C2233EA0086D111 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		A7EB1A752C2233F10086D111 /* PuzzleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleModel.swift; sourceTree = "<group>"; };
+		A7EB1A772C2237340086D111 /* X.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X.swift; sourceTree = "<group>"; };
+		A7EB1A792C223AED0086D111 /* HowToPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayView.swift; sourceTree = "<group>"; };
+		A7EB1A7B2C223C460086D111 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A7EB1A7D2C22632D0086D111 /* PreGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +111,7 @@
 				A760B0812C0FB16000FF82D4 /* FirebaseDatabase in Frameworks */,
 				A760B08F2C0FB16000FF82D4 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				A760B0872C0FB16000FF82D4 /* FirebaseFirestore in Frameworks */,
+				A761AA532C12F46C004E634D /* SwiftUIX in Frameworks */,
 				A760B0732C0FB16000FF82D4 /* FirebaseAnalyticsSwift in Frameworks */,
 				A760B06F2C0FB16000FF82D4 /* FirebaseAnalytics in Frameworks */,
 				A760B0712C0FB16000FF82D4 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
@@ -136,6 +168,7 @@
 				A73A18E72C0FAC2A0095A5DB /* iplayyoulisten.entitlements */,
 				A760B06A2C0FB0EF00FF82D4 /* GoogleService-Info.plist */,
 				A73A18E12C0FAC290095A5DB /* iplayyoulistenApp.swift */,
+				A7EB1A7B2C223C460086D111 /* ContentView.swift */,
 				A73A18E52C0FAC2A0095A5DB /* Assets.xcassets */,
 				A7CB58182C109C9700C773AA /* App */,
 				A7CB58192C109C9A00C773AA /* Background */,
@@ -159,6 +192,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A7943A782C234DFA0078852F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A7EB1A652C21EDA90086D111 /* MainMenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		A7943A792C234E0D0078852F /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				A7EB1A7D2C22632D0086D111 /* PreGameView.swift */,
+				A7943A7A2C234E290078852F /* GameController.swift */,
+				A7943A802C2377F50078852F /* GameView.swift */,
+				A7943A8C2C23D7100078852F /* AlbumView.swift */,
+				A7943A902C2463F50078852F /* ResultsView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		A7943A942C247A6F0078852F /* HowToPlay */ = {
+			isa = PBXGroup;
+			children = (
+				A7EB1A792C223AED0086D111 /* HowToPlayView.swift */,
+				A7943A952C247A850078852F /* SampleAlbumView.swift */,
+			);
+			path = HowToPlay;
+			sourceTree = "<group>";
+		};
 		A7CB58182C109C9700C773AA /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +233,7 @@
 		A7CB58192C109C9A00C773AA /* Background */ = {
 			isa = PBXGroup;
 			children = (
+				A7EB1A772C2237340086D111 /* X.swift */,
 				A7CB581D2C109CB400C773AA /* Models */,
 				A7CB581C2C109CAE00C773AA /* Service */,
 				A7CB581E2C109CC500C773AA /* Utilities */,
@@ -181,8 +244,9 @@
 		A7CB581A2C109CA100C773AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A7CB581F2C109CFA00C773AA /* SongOfTheDayView.swift */,
-				A7CB58382C11281D00C773AA /* HistoryView.swift */,
+				A7943A942C247A6F0078852F /* HowToPlay */,
+				A7943A792C234E0D0078852F /* Game */,
+				A7943A782C234DFA0078852F /* Menu */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,11 +254,16 @@
 		A7CB581B2C109CA600C773AA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A7CB58252C10A17A00C773AA /* DisplaySongCell.swift */,
-				A7CB582A2C10B6C400C773AA /* ExplicitTag.swift */,
 				A7CB582C2C10BC6A00C773AA /* SpotifyIcon.swift */,
 				A7CB582E2C10BCC100C773AA /* AppleMusicIcon.swift */,
-				A7CB58362C10DAD400C773AA /* HistoryCell.swift */,
+				A7EB1A6D2C2203340086D111 /* MenuBackground.swift */,
+				A7943A7E2C23747D0078852F /* TapToReloadLabel.swift */,
+				A7943A842C2397DF0078852F /* DisplayArtwork.swift */,
+				A7943A862C239BD60078852F /* DisplayAlbumTitle.swift */,
+				A7943A882C239DA80078852F /* DisplayAlbumGenreAndYear.swift */,
+				A7943A8A2C23A4070078852F /* PuzzleHint.swift */,
+				A7943A8E2C24480A0078852F /* DisplayArtist.swift */,
+				A7943A922C246FAB0078852F /* ResultCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -211,7 +280,8 @@
 		A7CB581D2C109CB400C773AA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A7CB58232C109F8500C773AA /* SongOfTheDay.swift */,
+				A7EB1A732C2233EA0086D111 /* AlbumModel.swift */,
+				A7EB1A752C2233F10086D111 /* PuzzleModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +289,7 @@
 		A7CB581E2C109CC500C773AA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A7EB1A692C22007C0086D111 /* CustomColors.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -269,6 +340,7 @@
 				A760B0A22C0FB16000FF82D4 /* FirebaseStorageCombine-Community */,
 				A760B0A42C0FB16000FF82D4 /* FirebaseVertexAI-Preview */,
 				A7CB58282C10A1CB00C773AA /* Kingfisher */,
+				A761AA522C12F46C004E634D /* SwiftUIX */,
 			);
 			productName = iplayyoulisten;
 			productReference = A73A18DE2C0FAC290095A5DB /* iplayyoulisten.app */;
@@ -301,6 +373,7 @@
 			packageReferences = (
 				A760B06C2C0FB11500FF82D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A7CB58272C10A1CB00C773AA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A761AA512C12F46C004E634D /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = A73A18DF2C0FAC290095A5DB /* Products */;
 			projectDirPath = "";
@@ -329,17 +402,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7EB1A662C21EDA90086D111 /* MainMenuView.swift in Sources */,
+				A7943A7B2C234E290078852F /* GameController.swift in Sources */,
+				A7EB1A742C2233EA0086D111 /* AlbumModel.swift in Sources */,
+				A7943A812C2377F50078852F /* GameView.swift in Sources */,
+				A7EB1A7E2C22632D0086D111 /* PreGameView.swift in Sources */,
+				A7943A8D2C23D7100078852F /* AlbumView.swift in Sources */,
+				A7EB1A7C2C223C460086D111 /* ContentView.swift in Sources */,
+				A7943A912C2463F50078852F /* ResultsView.swift in Sources */,
+				A7943A8B2C23A4070078852F /* PuzzleHint.swift in Sources */,
 				A7CB58332C10CC9200C773AA /* FetchService.swift in Sources */,
-				A7CB58202C109CFA00C773AA /* SongOfTheDayView.swift in Sources */,
-				A7CB582B2C10B6C400C773AA /* ExplicitTag.swift in Sources */,
+				A7943A892C239DA80078852F /* DisplayAlbumGenreAndYear.swift in Sources */,
+				A7943A932C246FAB0078852F /* ResultCell.swift in Sources */,
+				A7EB1A6A2C22007C0086D111 /* CustomColors.swift in Sources */,
 				A7CB58352C10D32700C773AA /* AuthService.swift in Sources */,
-				A7CB58372C10DAD400C773AA /* HistoryCell.swift in Sources */,
-				A7CB58392C11281D00C773AA /* HistoryView.swift in Sources */,
+				A7EB1A6E2C2203340086D111 /* MenuBackground.swift in Sources */,
+				A7EB1A782C2237340086D111 /* X.swift in Sources */,
+				A7EB1A762C2233F10086D111 /* PuzzleModel.swift in Sources */,
+				A7943A962C247A850078852F /* SampleAlbumView.swift in Sources */,
 				A7CB582F2C10BCC100C773AA /* AppleMusicIcon.swift in Sources */,
-				A7CB58262C10A17A00C773AA /* DisplaySongCell.swift in Sources */,
+				A7943A7F2C23747D0078852F /* TapToReloadLabel.swift in Sources */,
+				A7943A8F2C24480A0078852F /* DisplayArtist.swift in Sources */,
 				A7CB582D2C10BC6A00C773AA /* SpotifyIcon.swift in Sources */,
 				A73A18E22C0FAC290095A5DB /* iplayyoulistenApp.swift in Sources */,
-				A7CB58242C109F8500C773AA /* SongOfTheDay.swift in Sources */,
+				A7EB1A7A2C223AED0086D111 /* HowToPlayView.swift in Sources */,
+				A7943A852C2397DF0078852F /* DisplayArtwork.swift in Sources */,
+				A7943A872C239BD60078852F /* DisplayAlbumTitle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,8 +562,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iplayyoulisten/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = iplay;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_CFBundleDisplayName = "Put On";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -490,7 +578,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = org.Elobook.iplayyoulisten;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -516,8 +604,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iplayyoulisten/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = iplay;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_CFBundleDisplayName = "Put On";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -532,7 +620,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = org.Elobook.iplayyoulisten;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -574,6 +662,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.27.0;
+			};
+		};
+		A761AA512C12F46C004E634D /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
 			};
 		};
 		A7CB58272C10A1CB00C773AA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
@@ -726,6 +822,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A760B06C2C0FB11500FF82D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseVertexAI-Preview";
+		};
+		A761AA522C12F46C004E634D /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A761AA512C12F46C004E634D /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
 		};
 		A7CB58282C10A1CB00C773AA /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

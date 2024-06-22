@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct MainMenuView: View {
-    @State private var showHowToPlaySheet: Bool = false
+    var puzzle: PuzzleModel?
+    var albums: [AlbumModel]?
+    var scoreCard: [String: Bool]?
     
+    @State private var showHowToPlaySheet: Bool = false
     
     let iconDimension: CGFloat = UIScreen.main.bounds.width * 0.25
     var body: some View {
@@ -35,21 +38,32 @@ struct MainMenuView: View {
                             CustomLabel(title: "Play")
                         }
                         
-//                        NavigationLink {
-//                            
-//                        } label: {
-//                            CustomLabel(title: "Archives")
-//                        }
+
+                        
+                        if let puzzle = self.puzzle, let albums = self.albums, let scoreCard = self.scoreCard {
+                            NavigationLink {
+                                ResultsView(puzzle: puzzle, albums: albums, scoreCard: scoreCard, hideMenuButton: true)
+                            } label: {
+                                CustomLabel(title: "Previous Game")
+                            }
+                        }
                         
                         NavigationLink {
                             HowToPlayView()
                         } label: {
                             CustomLabel(title: "How To Play")
                         }
+                        
+
                     }
                     
                     Spacer()
+                    
+                    Text("Music Trivia")
+                        .font(.footnote)
+                        .foregroundStyle(.black)
                 }
+                .padding()
             }
         }
     }
@@ -58,12 +72,10 @@ struct MainMenuView: View {
 private struct CustomLabel: View {
     let title: String
     
-    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         Text(title)
             .font(.title.weight(.semibold))
-            .foregroundStyle(colorScheme == .dark ? .white : .black)
-            .shadow(radius: 5)
+            .foregroundStyle(.black)
     }
 }
 

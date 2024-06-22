@@ -21,11 +21,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct iplayyoulistenApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
+    @StateObject private var x = X()
     var body: some Scene {
         WindowGroup {
-            SongOfTheDayView()
-                .tint(Color(.systemPink))
+            ContentView()
+                .environmentObject(x)
         }
     }
 }

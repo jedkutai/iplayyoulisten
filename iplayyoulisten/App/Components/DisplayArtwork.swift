@@ -6,13 +6,18 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct DisplayArtwork: View {
+    let artworkUrl: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        KFImage(URL(string: artworkUrl))
+            .resizable()
+            .scaledToFit()
+            .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
 #Preview {
-    DisplayArtwork()
+    DisplayArtwork(artworkUrl: "https://firebasestorage.googleapis.com/v0/b/iplayyoulisten.appspot.com/o/admin%2Fartwork%2FA%24AP%20Ferg%20ALWAYS%20STRIVE%20AND%20PROS.webp?alt=media&token=b04b7840-3795-46ff-9af3-1297b7c46c0f")
 }
