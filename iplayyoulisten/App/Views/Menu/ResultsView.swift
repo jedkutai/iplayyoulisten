@@ -22,7 +22,7 @@ struct ResultsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                MenuBackground()
+                AppBackground()
                 
                 VStack {
                     Image(systemName: "plus")

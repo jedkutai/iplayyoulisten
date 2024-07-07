@@ -15,7 +15,11 @@ struct ResultCell: View {
     let iconDimension: CGFloat = UIScreen.main.bounds.height / 16
     var body: some View {
         HStack {
-            KFImage(URL(string: album.artworkUrl))
+            KFImage(URL(string: album.artworkUnblurredUrl ?? album.artworkUrl))
+                .placeholder {
+                    ProgressView()
+                        .frame(width: iconDimension, height: iconDimension)
+                }
                 .resizable()
                 .scaledToFit()
                 .frame(width: iconDimension, height: iconDimension)
@@ -49,6 +53,6 @@ struct ResultCell: View {
     }
 }
 
-#Preview {
-    ResultCell(album: AlbumModel.albums[0], correct: false)
-}
+//#Preview {
+//    ResultCell()
+//}

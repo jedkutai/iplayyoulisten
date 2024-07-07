@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct StreaksDisplay: View {
+    @EnvironmentObject var x: X
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "flame")
+                .foregroundStyle(.black)
+            
+            Text("\(x.twoOrMoreCorrect)")
+                .foregroundStyle(.black)
+        }
     }
 }
 
-#Preview {
-    StreaksDisplay()
-}
+//#Preview {
+//    StreaksDisplay()
+//}

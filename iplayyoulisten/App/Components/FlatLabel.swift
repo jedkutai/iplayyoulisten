@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct FlatLabel: View {
+    let text: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(text)
+            .foregroundStyle(.white)
+            .font(.subheadline)
+            .frame(maxWidth: .infinity)
+            .padding(5)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundStyle(.black)
+            )
     }
 }
 
 #Preview {
-    FlatLabel()
+    FlatLabel(text: "Next")
 }

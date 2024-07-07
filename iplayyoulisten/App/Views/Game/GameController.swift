@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameController: View {
     let puzzle: PuzzleModel
-    @State var dontSaveId: Any?
+//    @State var dontSaveId: Any?
     @State private var albums: [AlbumModel]?
     @State private var failed: Bool = false
     
@@ -23,7 +23,7 @@ struct GameController: View {
         } else if failed {
             NavigationStack {
                 ZStack {
-                    MenuBackground()
+                    AppBackground()
                     
                     Button {
                         self.onAppearActions()
@@ -45,7 +45,7 @@ struct GameController: View {
         } else {
             NavigationStack {
                 ZStack {
-                    MenuBackground()
+                    AppBackground()
                     
                     ProgressView()
                 }
@@ -71,9 +71,9 @@ struct GameController: View {
         Task {
             do {
                 self.albums = try await FetchService.fetchAlbumsByPuzzle(puzzle: puzzle)
-                if dontSaveId == nil {
-                    x.updateLastPuzzleId(id: puzzle.id)
-                }
+                x.updateLastPuzzleId(id: puzzle.id)
+                x.updateHintsRemaining(change: 10)
+                x.cacheStreaks()
             } catch {
                 failed = true
             }

@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A718F4A32C28CDD400736667 /* PuzzleHintDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A718F4A22C28CDD400736667 /* PuzzleHintDisplayer.swift */; };
+		A718F4A72C28D33A00736667 /* HintFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A718F4A62C28D33A00736667 /* HintFunctions.swift */; };
+		A71D8F7F2C26659E00402FE4 /* AlbumViewiOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D8F7E2C26659E00402FE4 /* AlbumViewiOS15.swift */; };
+		A71D8F812C26663D00402FE4 /* AlbumViewiOS17.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D8F802C26663D00402FE4 /* AlbumViewiOS17.swift */; };
+		A71D8F832C2666A800402FE4 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D8F822C2666A800402FE4 /* AlbumViewController.swift */; };
+		A71D8F852C2669D400402FE4 /* ShowAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D8F842C2669D400402FE4 /* ShowAnswer.swift */; };
 		A73A18E22C0FAC290095A5DB /* iplayyoulistenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A18E12C0FAC290095A5DB /* iplayyoulistenApp.swift */; };
 		A73A18E62C0FAC2A0095A5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73A18E52C0FAC2A0095A5DB /* Assets.xcassets */; };
 		A73A18EA2C0FAC2A0095A5DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73A18E92C0FAC2A0095A5DB /* Preview Assets.xcassets */; };
+		A73B2DDC2C2B5DAF005CB30F /* StreaksDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73B2DDB2C2B5DAF005CB30F /* StreaksDisplay.swift */; };
+		A749D78B2C2DA17200A1852E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749D78A2C2DA17200A1852E /* Extensions.swift */; };
+		A749D78F2C2DA31000A1852E /* AppBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749D78E2C2DA31000A1852E /* AppBackground.swift */; };
 		A760B06B2C0FB0EF00FF82D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A760B06A2C0FB0EF00FF82D4 /* GoogleService-Info.plist */; };
 		A760B06F2C0FB16000FF82D4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A760B06E2C0FB16000FF82D4 /* FirebaseAnalytics */; };
 		A760B0712C0FB16000FF82D4 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = A760B0702C0FB16000FF82D4 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -40,6 +49,7 @@
 		A760B0A32C0FB16000FF82D4 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A760B0A22C0FB16000FF82D4 /* FirebaseStorageCombine-Community */; };
 		A760B0A52C0FB16000FF82D4 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = A760B0A42C0FB16000FF82D4 /* FirebaseVertexAI-Preview */; };
 		A761AA532C12F46C004E634D /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = A761AA522C12F46C004E634D /* SwiftUIX */; };
+		A76C14C92C2EEFE3001664CC /* FlatLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76C14C82C2EEFE3001664CC /* FlatLabel.swift */; };
 		A7943A7B2C234E290078852F /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A7A2C234E290078852F /* GameController.swift */; };
 		A7943A7F2C23747D0078852F /* TapToReloadLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A7E2C23747D0078852F /* TapToReloadLabel.swift */; };
 		A7943A812C2377F50078852F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A802C2377F50078852F /* GameView.swift */; };
@@ -47,16 +57,26 @@
 		A7943A872C239BD60078852F /* DisplayAlbumTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A862C239BD60078852F /* DisplayAlbumTitle.swift */; };
 		A7943A892C239DA80078852F /* DisplayAlbumGenreAndYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A882C239DA80078852F /* DisplayAlbumGenreAndYear.swift */; };
 		A7943A8B2C23A4070078852F /* PuzzleHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A8A2C23A4070078852F /* PuzzleHint.swift */; };
-		A7943A8D2C23D7100078852F /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A8C2C23D7100078852F /* AlbumView.swift */; };
 		A7943A8F2C24480A0078852F /* DisplayArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A8E2C24480A0078852F /* DisplayArtist.swift */; };
 		A7943A912C2463F50078852F /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A902C2463F50078852F /* ResultsView.swift */; };
 		A7943A932C246FAB0078852F /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A922C246FAB0078852F /* ResultCell.swift */; };
 		A7943A962C247A850078852F /* SampleAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7943A952C247A850078852F /* SampleAlbumView.swift */; };
+		A7A16CDF2C29CCE30019805E /* DisplayArtwork2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16CDE2C29CCE30019805E /* DisplayArtwork2.swift */; };
+		A7A16CE12C2A09140019805E /* CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16CE02C2A09140019805E /* CustomKeyboard.swift */; };
+		A7A16CE32C2A2B780019805E /* AlbumViewiOS17Bottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16CE22C2A2B780019805E /* AlbumViewiOS17Bottom.swift */; };
+		A7A16CE62C2A2F780019805E /* AlbumViewiOS15Bottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16CE52C2A2F780019805E /* AlbumViewiOS15Bottom.swift */; };
+		A7A831C72C2BBE7100ADA1B1 /* paradise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7A831C62C2BBE7100ADA1B1 /* paradise.mp3 */; };
+		A7A831CB2C2BC1FB00ADA1B1 /* MusicPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A831CA2C2BC1FB00ADA1B1 /* MusicPill.swift */; };
+		A7B0178A2C326C2C00D488B6 /* LinkAppleMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B017892C326C2C00D488B6 /* LinkAppleMusicView.swift */; };
+		A7B0178C2C3275FF00D488B6 /* MusicHintPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B0178B2C3275FF00D488B6 /* MusicHintPlayer.swift */; };
 		A7CB58292C10A1CB00C773AA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A7CB58282C10A1CB00C773AA /* Kingfisher */; };
 		A7CB582D2C10BC6A00C773AA /* SpotifyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB582C2C10BC6A00C773AA /* SpotifyIcon.swift */; };
 		A7CB582F2C10BCC100C773AA /* AppleMusicIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB582E2C10BCC100C773AA /* AppleMusicIcon.swift */; };
 		A7CB58332C10CC9200C773AA /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58322C10CC9200C773AA /* FetchService.swift */; };
 		A7CB58352C10D32700C773AA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CB58342C10D32700C773AA /* AuthService.swift */; };
+		A7E237452C38E49F00BA15A5 /* HistoryPuzzleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E237442C38E49F00BA15A5 /* HistoryPuzzleCell.swift */; };
+		A7E237472C38EA9F00BA15A5 /* HistoryAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E237462C38EA9F00BA15A5 /* HistoryAlbumCell.swift */; };
+		A7E44C3C2C37B39B00092EF3 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E44C3B2C37B39B00092EF3 /* HistoryView.swift */; };
 		A7EB1A662C21EDA90086D111 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A652C21EDA90086D111 /* MainMenuView.swift */; };
 		A7EB1A6A2C22007C0086D111 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A692C22007C0086D111 /* CustomColors.swift */; };
 		A7EB1A6E2C2203340086D111 /* MenuBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EB1A6D2C2203340086D111 /* MenuBackground.swift */; };
@@ -69,12 +89,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A718F4A22C28CDD400736667 /* PuzzleHintDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleHintDisplayer.swift; sourceTree = "<group>"; };
+		A718F4A62C28D33A00736667 /* HintFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintFunctions.swift; sourceTree = "<group>"; };
+		A71D8F7E2C26659E00402FE4 /* AlbumViewiOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewiOS15.swift; sourceTree = "<group>"; };
+		A71D8F802C26663D00402FE4 /* AlbumViewiOS17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewiOS17.swift; sourceTree = "<group>"; };
+		A71D8F822C2666A800402FE4 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		A71D8F842C2669D400402FE4 /* ShowAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAnswer.swift; sourceTree = "<group>"; };
 		A73A18DE2C0FAC290095A5DB /* iplayyoulisten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iplayyoulisten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73A18E12C0FAC290095A5DB /* iplayyoulistenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iplayyoulistenApp.swift; sourceTree = "<group>"; };
 		A73A18E52C0FAC2A0095A5DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A73A18E72C0FAC2A0095A5DB /* iplayyoulisten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iplayyoulisten.entitlements; sourceTree = "<group>"; };
 		A73A18E92C0FAC2A0095A5DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A73B2DDB2C2B5DAF005CB30F /* StreaksDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksDisplay.swift; sourceTree = "<group>"; };
+		A749D78A2C2DA17200A1852E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A749D78E2C2DA31000A1852E /* AppBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
 		A760B06A2C0FB0EF00FF82D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A76C14C82C2EEFE3001664CC /* FlatLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatLabel.swift; sourceTree = "<group>"; };
 		A7943A7A2C234E290078852F /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		A7943A7E2C23747D0078852F /* TapToReloadLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToReloadLabel.swift; sourceTree = "<group>"; };
 		A7943A802C2377F50078852F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -82,16 +112,26 @@
 		A7943A862C239BD60078852F /* DisplayAlbumTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAlbumTitle.swift; sourceTree = "<group>"; };
 		A7943A882C239DA80078852F /* DisplayAlbumGenreAndYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAlbumGenreAndYear.swift; sourceTree = "<group>"; };
 		A7943A8A2C23A4070078852F /* PuzzleHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleHint.swift; sourceTree = "<group>"; };
-		A7943A8C2C23D7100078852F /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		A7943A8E2C24480A0078852F /* DisplayArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayArtist.swift; sourceTree = "<group>"; };
 		A7943A902C2463F50078852F /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		A7943A922C246FAB0078852F /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		A7943A952C247A850078852F /* SampleAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAlbumView.swift; sourceTree = "<group>"; };
+		A7A16CDE2C29CCE30019805E /* DisplayArtwork2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayArtwork2.swift; sourceTree = "<group>"; };
+		A7A16CE02C2A09140019805E /* CustomKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboard.swift; sourceTree = "<group>"; };
+		A7A16CE22C2A2B780019805E /* AlbumViewiOS17Bottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewiOS17Bottom.swift; sourceTree = "<group>"; };
+		A7A16CE52C2A2F780019805E /* AlbumViewiOS15Bottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewiOS15Bottom.swift; sourceTree = "<group>"; };
+		A7A831C62C2BBE7100ADA1B1 /* paradise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = paradise.mp3; sourceTree = "<group>"; };
+		A7A831CA2C2BC1FB00ADA1B1 /* MusicPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPill.swift; sourceTree = "<group>"; };
+		A7B017892C326C2C00D488B6 /* LinkAppleMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkAppleMusicView.swift; sourceTree = "<group>"; };
+		A7B0178B2C3275FF00D488B6 /* MusicHintPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHintPlayer.swift; sourceTree = "<group>"; };
 		A7CB582C2C10BC6A00C773AA /* SpotifyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyIcon.swift; sourceTree = "<group>"; };
 		A7CB582E2C10BCC100C773AA /* AppleMusicIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicIcon.swift; sourceTree = "<group>"; };
 		A7CB58322C10CC9200C773AA /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 		A7CB58342C10D32700C773AA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A7CB583A2C1132EC00C773AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A7E237442C38E49F00BA15A5 /* HistoryPuzzleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPuzzleCell.swift; sourceTree = "<group>"; };
+		A7E237462C38EA9F00BA15A5 /* HistoryAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAlbumCell.swift; sourceTree = "<group>"; };
+		A7E44C3B2C37B39B00092EF3 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		A7EB1A652C21EDA90086D111 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		A7EB1A692C22007C0086D111 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		A7EB1A6D2C2203340086D111 /* MenuBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackground.swift; sourceTree = "<group>"; };
@@ -195,7 +235,9 @@
 		A7943A782C234DFA0078852F /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				A7943A902C2463F50078852F /* ResultsView.swift */,
 				A7EB1A652C21EDA90086D111 /* MainMenuView.swift */,
+				A7E44C3B2C37B39B00092EF3 /* HistoryView.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -206,8 +248,6 @@
 				A7EB1A7D2C22632D0086D111 /* PreGameView.swift */,
 				A7943A7A2C234E290078852F /* GameController.swift */,
 				A7943A802C2377F50078852F /* GameView.swift */,
-				A7943A8C2C23D7100078852F /* AlbumView.swift */,
-				A7943A902C2463F50078852F /* ResultsView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -219,6 +259,34 @@
 				A7943A952C247A850078852F /* SampleAlbumView.swift */,
 			);
 			path = HowToPlay;
+			sourceTree = "<group>";
+		};
+		A7A16CE42C2A2F3D0019805E /* AlbumViews */ = {
+			isa = PBXGroup;
+			children = (
+				A71D8F822C2666A800402FE4 /* AlbumViewController.swift */,
+				A71D8F7E2C26659E00402FE4 /* AlbumViewiOS15.swift */,
+				A71D8F802C26663D00402FE4 /* AlbumViewiOS17.swift */,
+				A7A16CE22C2A2B780019805E /* AlbumViewiOS17Bottom.swift */,
+				A7A16CE52C2A2F780019805E /* AlbumViewiOS15Bottom.swift */,
+			);
+			path = AlbumViews;
+			sourceTree = "<group>";
+		};
+		A7A831C52C2BBE6200ADA1B1 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				A7A831C62C2BBE7100ADA1B1 /* paradise.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		A7B017882C326C1700D488B6 /* StreamingServices */ = {
+			isa = PBXGroup;
+			children = (
+				A7B017892C326C2C00D488B6 /* LinkAppleMusicView.swift */,
+			);
+			path = StreamingServices;
 			sourceTree = "<group>";
 		};
 		A7CB58182C109C9700C773AA /* App */ = {
@@ -235,6 +303,7 @@
 			children = (
 				A7EB1A772C2237340086D111 /* X.swift */,
 				A7CB581D2C109CB400C773AA /* Models */,
+				A7A831C52C2BBE6200ADA1B1 /* Music */,
 				A7CB581C2C109CAE00C773AA /* Service */,
 				A7CB581E2C109CC500C773AA /* Utilities */,
 			);
@@ -244,6 +313,8 @@
 		A7CB581A2C109CA100C773AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7B017882C326C1700D488B6 /* StreamingServices */,
+				A7A16CE42C2A2F3D0019805E /* AlbumViews */,
 				A7943A942C247A6F0078852F /* HowToPlay */,
 				A7943A792C234E0D0078852F /* Game */,
 				A7943A782C234DFA0078852F /* Menu */,
@@ -254,16 +325,27 @@
 		A7CB581B2C109CA600C773AA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A7CB582C2C10BC6A00C773AA /* SpotifyIcon.swift */,
+				A749D78E2C2DA31000A1852E /* AppBackground.swift */,
 				A7CB582E2C10BCC100C773AA /* AppleMusicIcon.swift */,
-				A7EB1A6D2C2203340086D111 /* MenuBackground.swift */,
-				A7943A7E2C23747D0078852F /* TapToReloadLabel.swift */,
-				A7943A842C2397DF0078852F /* DisplayArtwork.swift */,
-				A7943A862C239BD60078852F /* DisplayAlbumTitle.swift */,
+				A7A16CE02C2A09140019805E /* CustomKeyboard.swift */,
 				A7943A882C239DA80078852F /* DisplayAlbumGenreAndYear.swift */,
-				A7943A8A2C23A4070078852F /* PuzzleHint.swift */,
+				A7943A862C239BD60078852F /* DisplayAlbumTitle.swift */,
 				A7943A8E2C24480A0078852F /* DisplayArtist.swift */,
+				A7943A842C2397DF0078852F /* DisplayArtwork.swift */,
+				A7A16CDE2C29CCE30019805E /* DisplayArtwork2.swift */,
+				A76C14C82C2EEFE3001664CC /* FlatLabel.swift */,
+				A7EB1A6D2C2203340086D111 /* MenuBackground.swift */,
+				A7B0178B2C3275FF00D488B6 /* MusicHintPlayer.swift */,
+				A7A831CA2C2BC1FB00ADA1B1 /* MusicPill.swift */,
+				A7943A8A2C23A4070078852F /* PuzzleHint.swift */,
+				A718F4A22C28CDD400736667 /* PuzzleHintDisplayer.swift */,
 				A7943A922C246FAB0078852F /* ResultCell.swift */,
+				A71D8F842C2669D400402FE4 /* ShowAnswer.swift */,
+				A7CB582C2C10BC6A00C773AA /* SpotifyIcon.swift */,
+				A73B2DDB2C2B5DAF005CB30F /* StreaksDisplay.swift */,
+				A7943A7E2C23747D0078852F /* TapToReloadLabel.swift */,
+				A7E237442C38E49F00BA15A5 /* HistoryPuzzleCell.swift */,
+				A7E237462C38EA9F00BA15A5 /* HistoryAlbumCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -290,6 +372,8 @@
 			isa = PBXGroup;
 			children = (
 				A7EB1A692C22007C0086D111 /* CustomColors.swift */,
+				A718F4A62C28D33A00736667 /* HintFunctions.swift */,
+				A749D78A2C2DA17200A1852E /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -392,6 +476,7 @@
 				A73A18EA2C0FAC2A0095A5DB /* Preview Assets.xcassets in Resources */,
 				A73A18E62C0FAC2A0095A5DB /* Assets.xcassets in Resources */,
 				A760B06B2C0FB0EF00FF82D4 /* GoogleService-Info.plist in Resources */,
+				A7A831C72C2BBE7100ADA1B1 /* paradise.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,30 +489,49 @@
 			files = (
 				A7EB1A662C21EDA90086D111 /* MainMenuView.swift in Sources */,
 				A7943A7B2C234E290078852F /* GameController.swift in Sources */,
+				A7A16CDF2C29CCE30019805E /* DisplayArtwork2.swift in Sources */,
 				A7EB1A742C2233EA0086D111 /* AlbumModel.swift in Sources */,
+				A71D8F852C2669D400402FE4 /* ShowAnswer.swift in Sources */,
 				A7943A812C2377F50078852F /* GameView.swift in Sources */,
 				A7EB1A7E2C22632D0086D111 /* PreGameView.swift in Sources */,
-				A7943A8D2C23D7100078852F /* AlbumView.swift in Sources */,
 				A7EB1A7C2C223C460086D111 /* ContentView.swift in Sources */,
 				A7943A912C2463F50078852F /* ResultsView.swift in Sources */,
+				A76C14C92C2EEFE3001664CC /* FlatLabel.swift in Sources */,
+				A7A16CE62C2A2F780019805E /* AlbumViewiOS15Bottom.swift in Sources */,
 				A7943A8B2C23A4070078852F /* PuzzleHint.swift in Sources */,
 				A7CB58332C10CC9200C773AA /* FetchService.swift in Sources */,
 				A7943A892C239DA80078852F /* DisplayAlbumGenreAndYear.swift in Sources */,
 				A7943A932C246FAB0078852F /* ResultCell.swift in Sources */,
+				A749D78F2C2DA31000A1852E /* AppBackground.swift in Sources */,
+				A7B0178A2C326C2C00D488B6 /* LinkAppleMusicView.swift in Sources */,
+				A7E44C3C2C37B39B00092EF3 /* HistoryView.swift in Sources */,
+				A73B2DDC2C2B5DAF005CB30F /* StreaksDisplay.swift in Sources */,
+				A718F4A32C28CDD400736667 /* PuzzleHintDisplayer.swift in Sources */,
 				A7EB1A6A2C22007C0086D111 /* CustomColors.swift in Sources */,
+				A7A16CE32C2A2B780019805E /* AlbumViewiOS17Bottom.swift in Sources */,
 				A7CB58352C10D32700C773AA /* AuthService.swift in Sources */,
 				A7EB1A6E2C2203340086D111 /* MenuBackground.swift in Sources */,
 				A7EB1A782C2237340086D111 /* X.swift in Sources */,
 				A7EB1A762C2233F10086D111 /* PuzzleModel.swift in Sources */,
 				A7943A962C247A850078852F /* SampleAlbumView.swift in Sources */,
+				A7A831CB2C2BC1FB00ADA1B1 /* MusicPill.swift in Sources */,
+				A71D8F812C26663D00402FE4 /* AlbumViewiOS17.swift in Sources */,
 				A7CB582F2C10BCC100C773AA /* AppleMusicIcon.swift in Sources */,
+				A718F4A72C28D33A00736667 /* HintFunctions.swift in Sources */,
+				A71D8F7F2C26659E00402FE4 /* AlbumViewiOS15.swift in Sources */,
+				A7A16CE12C2A09140019805E /* CustomKeyboard.swift in Sources */,
 				A7943A7F2C23747D0078852F /* TapToReloadLabel.swift in Sources */,
+				A7E237452C38E49F00BA15A5 /* HistoryPuzzleCell.swift in Sources */,
 				A7943A8F2C24480A0078852F /* DisplayArtist.swift in Sources */,
 				A7CB582D2C10BC6A00C773AA /* SpotifyIcon.swift in Sources */,
 				A73A18E22C0FAC290095A5DB /* iplayyoulistenApp.swift in Sources */,
+				A7E237472C38EA9F00BA15A5 /* HistoryAlbumCell.swift in Sources */,
+				A749D78B2C2DA17200A1852E /* Extensions.swift in Sources */,
+				A7B0178C2C3275FF00D488B6 /* MusicHintPlayer.swift in Sources */,
 				A7EB1A7A2C223AED0086D111 /* HowToPlayView.swift in Sources */,
 				A7943A852C2397DF0078852F /* DisplayArtwork.swift in Sources */,
 				A7943A872C239BD60078852F /* DisplayAlbumTitle.swift in Sources */,
+				A71D8F832C2666A800402FE4 /* AlbumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +668,7 @@
 				INFOPLIST_FILE = iplayyoulisten/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Put On";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app requires Apple Music library access to play music tracks.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -578,7 +683,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = org.Elobook.iplayyoulisten;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -606,6 +711,7 @@
 				INFOPLIST_FILE = iplayyoulisten/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Put On";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app requires Apple Music library access to play music tracks.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -620,7 +726,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = org.Elobook.iplayyoulisten;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;

@@ -14,6 +14,7 @@ struct AlbumViewController: View {
     
     @Binding var currentIndex: Int
     @Binding var scoreCard: [String: Bool]
+    @Binding var hintsUsed: Int
     
     @State private var guessText: String = ""
     @State private var guessState: GuessState = .none
@@ -30,9 +31,9 @@ struct AlbumViewController: View {
     
     var body: some View {
         if #available(iOS 17.0, *) {
-            AlbumViewiOS17(puzzle: puzzle, album: album, albums: albums, currentIndex: $currentIndex, scoreCard: $scoreCard, hiddenIndexes: HintFunctions.getHiddenIndexes(artistName: album.artist))
+            AlbumViewiOS17(puzzle: puzzle, album: album, albums: albums, currentIndex: $currentIndex, scoreCard: $scoreCard, hintsUsed: $hintsUsed, hiddenIndexes: HintFunctions.getHiddenIndexes(artistName: album.artist))
         } else {
-            AlbumViewiOS15(puzzle: puzzle, album: album, albums: albums, currentIndex: $currentIndex, scoreCard: $scoreCard, hiddenIndexes: HintFunctions.getHiddenIndexes(artistName: album.artist))
+            AlbumViewiOS15(puzzle: puzzle, album: album, albums: albums, currentIndex: $currentIndex, scoreCard: $scoreCard, hintsUsed: $hintsUsed, hiddenIndexes: HintFunctions.getHiddenIndexes(artistName: album.artist))
         }
     }
 }

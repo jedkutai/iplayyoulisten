@@ -11,10 +11,11 @@ struct PreGameView: View {
     @State private var puzzle: PuzzleModel?
     @State private var failed: Bool = false
     
+    
     var body: some View {
         NavigationStack {
             ZStack {
-                MenuBackground()
+                AppBackground()
                 
                 VStack {
                     if let puzzle = self.puzzle {
@@ -60,7 +61,7 @@ private struct PreGameLoadedView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                if x.lastPuzzlePlayedId == puzzle.id {
+                if x.lastPuzzlePlayedId == puzzle.id { //
                     Spacer()
                     
                     Text("Next Puzzle:")

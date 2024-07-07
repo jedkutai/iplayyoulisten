@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @EnvironmentObject var x: X
     var body: some View {
-        MainMenuView()
-            .tint(.black)
-            .preferredColorScheme(.light)
+        ZStack {
+            AppBackground()
+            
+            MainMenuView()
+            
+//            VStack {
+//                Spacer()
+//                
+//                MusicPill()
+//                
+//            }
+//            .padding()
+                
+        }
+        .tint(.black)
+        .preferredColorScheme(.light)
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}

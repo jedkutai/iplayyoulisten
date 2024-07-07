@@ -30,6 +30,23 @@ struct FetchService {
         return puzzle
     }
     
+    static func fetchPuzzlesHistory(limit: Int) async throws -> [PuzzleModel] {
+        var puzzles: [PuzzleModel] = []
+        
+        let currentTimestamp = Date.now
+        
+        let snapshot = try await Firestore.firestore().collection("puzzles")
+            .whereField("endTime", isLessThan: currentTimestamp)
+            .order(by: "endTime", descending: true)
+            .limit(to: limit)
+            .getDocuments()
+        
+        let fetchedPuzzles = snapshot.documents.compactMap({ try? $0.data(as: PuzzleModel.self) })
+        puzzles = fetchedPuzzles
+        
+        return puzzles
+    }
+    
     static func fetchPuzzleById(id: String) async throws -> PuzzleModel {
         let snapshot = try await Firestore.firestore().collection("puzzles").document(id).getDocument()
         return try snapshot.data(as: PuzzleModel.self)

@@ -22,13 +22,14 @@ struct GameView: View {
     
     @State private var currentIndex: Int = 0
     @State private var scoreCard = [String: Bool]()
+    @State private var hintsUsed = 0
     
     var body: some View {
         NavigationStack {
             ZStack {
                 ForEach(Array(albums.enumerated()), id: \.0) { index, album in
                     if currentIndex == index {
-                        AlbumView(puzzle: puzzle, album: album, albums: albums, currentIndex: $currentIndex, scoreCard: $scoreCard)
+                        AlbumViewController(puzzle: puzzle, album: album, albums: albums, currentIndex: $currentIndex, scoreCard: $scoreCard, hintsUsed: $hintsUsed)
                     }
                 }
             }
@@ -38,6 +39,6 @@ struct GameView: View {
 
 
 
-#Preview {
-    GameView(puzzle: PuzzleModel.puzzle, albums: AlbumModel.albums)
-}
+//#Preview {
+//    GameView(puzzle: PuzzleModel.puzzle, albums: AlbumModel.albums)
+//}

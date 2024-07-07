@@ -15,17 +15,17 @@ struct AlbumViewiOS17: View {
     
     @Binding var currentIndex: Int
     @Binding var scoreCard: [String: Bool]
+    @Binding var hintsUsed: Int
     
     @State var hiddenIndexes: [Int]
     
     @State private var guessedLetters: [String] = []
-//    @State private var guessText: String = ""
     @State private var guessState: GuessState = .none
     @State private var showGiveUpAlert: Bool = false
     @State private var successHapticTrigger: Bool = false
     @State private var errorHapticTrigger: Bool = false
     @State private var unblur: Bool = false
-    @State private var showKeyboard: Bool = false
+    @State private var showKeyboard: Bool = true
     
     
     let screenWidth: CGFloat = UIScreen.main.bounds.width
@@ -36,7 +36,7 @@ struct AlbumViewiOS17: View {
     var body: some View {
         ZStack {
             
-            MenuBackground()
+            AppBackground()
             
             VStack {
                 DisplayAlbumGenreAndYear(genre: album.genre, year: album.releaseYear)
@@ -48,8 +48,7 @@ struct AlbumViewiOS17: View {
                 
                 Spacer()
                 
-                
-                AlbumViewiOS17Bottom(guessState: $guessState, showKeyboard: $showKeyboard, guessedLetters: $guessedLetters, successHapticTrigger: $successHapticTrigger, errorHapticTrigger: $errorHapticTrigger, unblur: $unblur, scoreCard: $scoreCard, album: album, hiddenIndexes: hiddenIndexes)
+                AlbumViewiOS17Bottom(guessState: $guessState, showKeyboard: $showKeyboard, guessedLetters: $guessedLetters, successHapticTrigger: $successHapticTrigger, errorHapticTrigger: $errorHapticTrigger, unblur: $unblur, scoreCard: $scoreCard, currentIndex: $currentIndex, hintsUsed: $hintsUsed, puzzle: puzzle, album: album, albums: albums, hiddenIndexes: hiddenIndexes)
             }
             .padding()
         }
@@ -60,56 +59,46 @@ struct AlbumViewiOS17: View {
             guessState = .none
         }
         .toolbar {
-            if guessedLetters.isEmpty {
-                let hiddenIndexesCount = hiddenIndexes.count
-                
-                if hiddenIndexesCount > 2 && x.hintsRemaining > 0 {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button {
-                            // use hint
-                            x.updateHintsRemaining(change: -1)
-                            hiddenIndexes.remove(at: Int.random(in: 0..<hiddenIndexesCount))
-                        } label: {
-                            Text("Hints: \(x.hintsRemaining)")
-                                .foregroundStyle(.black)
-                                .minimumScaleFactor(0.1)
+            if guessState != .giveUp || guessState != .correct {
+                if guessedLetters.isEmpty {
+                    let hiddenIndexesCount = hiddenIndexes.count
+                    
+                    if hiddenIndexesCount > 2 && x.hintsRemaining > 0 {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button {
+                                // use hint
+                                x.updateHintsRemaining(change: -1)
+                                hintsUsed += 1
+                                hiddenIndexes.remove(at: Int.random(in: 0..<hiddenIndexesCount))
+                            } label: {
+                                Text("Hints: \(x.hintsRemaining)")
+                                    .foregroundStyle(.black)
+                                    .minimumScaleFactor(0.1)
+                            }
                         }
                     }
+                }
+                
+                if guessState != .giveUp && guessState != .correct {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            showGiveUpAlert = true
+                        } label: {
+                            Text("Give Up")
+                                .foregroundStyle(.black)
+                        }
+                    }
+                }
+                
+            }
+            
+            if let previewId = album.previewId {
+                ToolbarItem(placement: .topBarTrailing) {
+                    MusicHintPlayer(previewId: previewId)
                 }
             }
             
-            if self.showNext() {
-                if currentIndex < albums.count - 1 {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button {
-                            withAnimation {
-                                currentIndex += 1
-                            }
-                        } label: {
-                            Text("Next")
-                                .foregroundStyle(.black)
-                        }
-                    }
-                } else {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        NavigationLink {
-                            ResultsView(puzzle: puzzle, albums: albums, scoreCard: scoreCard).navigationBarBackButtonHidden()
-                        } label: {
-                            Text("Results") // change to skip
-                                .foregroundStyle(.black)
-                        }
-                    }
-                }
-            } else {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showGiveUpAlert = true
-                    } label: {
-                        Text("Give Up")
-                            .foregroundStyle(.black)
-                    }
-                }
-            }
+            
         }
         .alert("Give Up?", isPresented: $showGiveUpAlert) {
             Button("Give Up", role: .destructive) {

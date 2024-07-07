@@ -9,7 +9,22 @@ import SwiftUI
 
 struct AppBackground: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color(.white)
+            
+            LinearGradient(
+                colors: [
+                    Color.purlpe2,
+                    Color.purlpe1
+                ],
+                startPoint: .top, endPoint: .bottom
+            )
+            
+            Rectangle()
+                .foregroundStyle(.ultraThinMaterial)
+                
+        }
+        .ignoresSafeArea()
     }
 }
 

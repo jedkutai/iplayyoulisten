@@ -15,8 +15,12 @@ struct AlbumViewiOS17Bottom: View {
     @Binding var errorHapticTrigger: Bool
     @Binding var unblur: Bool
     @Binding var scoreCard: [String: Bool]
+    @Binding var currentIndex: Int
+    @Binding var hintsUsed: Int
     
+    let puzzle: PuzzleModel
     let album: AlbumModel
+    let albums: [AlbumModel]
     let hiddenIndexes: [Int]
     
     var body: some View {
@@ -47,17 +51,38 @@ struct AlbumViewiOS17Bottom: View {
             } else {
                 HStack {
                     
-                    Spacer()
-                    
-                    Button {
-                        withAnimation {
-                            showKeyboard.toggle()
-                        }
-                    } label: {
-                        PuzzleHintDisplayer(artistName: album.artist, hiddenIndexes: hiddenIndexes, guessedLetters: guessedLetters)
+//                    Spacer()
+                    if guessState == .incorrect {
+                        Image(systemName: "xmark.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 15)
+                            .foregroundStyle(Color(.systemRed))
+                    } else {
+                        Image(systemName: "xmark.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 15)
+                            .foregroundStyle(Color(.clear))
                     }
                     
-                    Spacer()
+//                    Button {
+//                        withAnimation {
+//                            showKeyboard.toggle()
+//                        }
+//                    } label: {
+//                        PuzzleHintDisplayer(artistName: album.artist, hiddenIndexes: hiddenIndexes, guessedLetters: guessedLetters)
+//                    }
+                    
+                    PuzzleHintDisplayer(artistName: album.artist, hiddenIndexes: hiddenIndexes, guessedLetters: guessedLetters)
+                    
+//                    Spacer()
+                    
+                    Image(systemName: "xmark.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 15)
+                        .foregroundStyle(Color(.clear))
                     
                 }
                 
@@ -96,6 +121,28 @@ struct AlbumViewiOS17Bottom: View {
                     }
                 }
                 
+            }
+            
+            if guessState == .giveUp || guessState == .correct {
+                if currentIndex < albums.count - 1 {
+                    Button {
+                        withAnimation {
+                            currentIndex += 1
+                        }
+                    } label: {
+                        FlatLabel(text: "Next")
+//                        Text("Next")
+//                            .foregroundStyle(.black)
+                    }
+                } else {
+                    NavigationLink {
+                        ResultsView(puzzle: puzzle, albums: albums, scoreCard: scoreCard, hintsUsed: hintsUsed).navigationBarBackButtonHidden()
+                    } label: {
+                        FlatLabel(text: "Results")
+//                        Text("Results") // change to skip
+//                            .foregroundStyle(.black)
+                    }
+                }
             }
         }
     }

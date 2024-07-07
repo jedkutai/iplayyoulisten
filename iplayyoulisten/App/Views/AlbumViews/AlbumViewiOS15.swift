@@ -14,17 +14,16 @@ struct AlbumViewiOS15: View {
     
     @Binding var currentIndex: Int
     @Binding var scoreCard: [String: Bool]
+    @Binding var hintsUsed: Int
     
     @State var hiddenIndexes: [Int]
     
-    @State private var guessText: String = ""
+    @State private var guessedLetters: [String] = []
     @State private var guessState: GuessState = .none
     @State private var showGiveUpAlert: Bool = false
-    @State private var successHapticTrigger: Bool = false
-    @State private var errorHapticTrigger: Bool = false
     @State private var unblur: Bool = false
+    @State private var showKeyboard: Bool = true
     
-    @FocusState private var keyboardFocused: Bool
     
     
     let screenWidth: CGFloat = UIScreen.main.bounds.width
@@ -35,7 +34,7 @@ struct AlbumViewiOS15: View {
     var body: some View {
         ZStack {
             
-            MenuBackground()
+            AppBackground()
             
             VStack {
                 DisplayAlbumGenreAndYear(genre: album.genre, year: album.releaseYear)
@@ -48,140 +47,56 @@ struct AlbumViewiOS15: View {
                 Spacer()
                 
                 
-                if guessState == .correct {
-                    HStack {
-                        Image(systemName: "checkmark.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 15)
-                            .foregroundStyle(Color(.systemGreen))
-                        
-                        DisplayArtist(artistName: album.artist)
-                        
-                        
-                    }
-                } else if guessState == .giveUp {
-                    HStack {
-                        Image(systemName: "xmark.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 15)
-                            .foregroundStyle(Color(.systemRed))
-                        
-                        DisplayArtist(artistName: album.artist)
-                        
-                    }
-                } else {
-                    PuzzleHintDisplayer(artistName: album.artist, hiddenIndexes: hiddenIndexes, guessedLetters: [])
-                    
-                    if guessState == .incorrect {
-                        Text("Incorrect")
-                            .font(.subheadline)
-                            .foregroundStyle(Color(.systemRed))
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.1)
-                    }
-                    
-                    HStack {
-                        HStack {
-                            TextField("Artist Name", text: $guessText)
-                                .focused($keyboardFocused)
-                                .autocorrectionDisabled()
-                            
-                            if keyboardFocused {
-                                Button {
-                                    keyboardFocused = false
-                                } label: {
-                                    Image(systemName: "keyboard.chevron.compact.down")
-                                        .foregroundStyle(.black)
-                                }
-                            }
-                            
-                            
-                        }
-                        .padding(10)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(.white)
-                                
-                        )
-                        
-                        if !guessText.isEmpty {
-                            Button {
-                                checkAnswer()
-                            } label: {
-                                Image(systemName: "arrow.up.circle.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 30)
-                                    .foregroundColor(Color(.systemBlue))
-                            }
-                        }
-                    }
-                }
+                AlbumViewiOS15Bottom(guessState: $guessState, showKeyboard: $showKeyboard, guessedLetters: $guessedLetters, unblur: $unblur, scoreCard: $scoreCard, currentIndex: $currentIndex, hintsUsed: $hintsUsed, puzzle: puzzle, album: album, albums: albums, hiddenIndexes: hiddenIndexes)
+                
             }
             .padding()
         }
         .onAppear {
             scoreCard[album.id] = false
         }
-        .onSubmit {
-            checkAnswer()
-        }
-        .onChange(of: keyboardFocused) { _ in
-            if keyboardFocused {
-                guessState = .none
-            }
-        }
         .toolbar {
-            let hiddenIndexesCount = hiddenIndexes.count
-            
-            if hiddenIndexesCount > 2 && x.hintsRemaining > 0 {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        // use hint
-                        x.updateHintsRemaining(change: -1)
-                        hiddenIndexes.remove(at: Int.random(in: 0..<hiddenIndexesCount))
-                    } label: {
-                        Text("Hints: \(x.hintsRemaining)")
-                            .foregroundStyle(.black)
-                            .minimumScaleFactor(0.1)
+            if guessState != .giveUp || guessState != .correct {
+                if guessedLetters.isEmpty {
+                    let hiddenIndexesCount = hiddenIndexes.count
+                    
+                    if hiddenIndexesCount > 2 && x.hintsRemaining > 0 {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button {
+                                // use hint
+                                x.updateHintsRemaining(change: -1)
+                                hintsUsed += 1
+                                hiddenIndexes.remove(at: Int.random(in: 0..<hiddenIndexesCount))
+                            } label: {
+                                Text("Hints: \(x.hintsRemaining)")
+                                    .foregroundStyle(.black)
+                                    .minimumScaleFactor(0.1)
+                            }
+                        }
                     }
                 }
-            }
-            
-            if guessState == .giveUp || guessState == .correct {
-                if currentIndex < albums.count - 1 {
+                
+                if guessState != .giveUp && guessState != .correct {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
-                            withAnimation {
-                                currentIndex += 1
-                            }
+                            showGiveUpAlert = true
                         } label: {
-                            Text("Next")
-                                .foregroundStyle(.black)
-                        }
-                    }
-                } else {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        NavigationLink {
-                            ResultsView(puzzle: puzzle, albums: albums, scoreCard: scoreCard).navigationBarBackButtonHidden()
-                        } label: {
-                            Text("Results") // change to skip
+                            Text("Give Up")
                                 .foregroundStyle(.black)
                         }
                     }
                 }
-            } else {
+                
+            }
+            
+            
+            if let previewId = album.previewId {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showGiveUpAlert = true
-                    } label: {
-                        Text("Give Up")
-                            .foregroundStyle(.black)
-                    }
+                    MusicHintPlayer(previewId: previewId)
                 }
             }
+            
+            
         }
         .alert("Give Up?", isPresented: $showGiveUpAlert) {
             Button("Give Up", role: .destructive) {
@@ -194,26 +109,6 @@ struct AlbumViewiOS15: View {
         }
     }
     
-    private func checkAnswer() {
-        let submission = guessText.lowercased()
-        
-        if submission == album.artist.lowercased() {
-            scoreCard[album.id] = true
-            
-            successHapticTrigger.toggle()
-            unblur = true
-            withAnimation {
-                guessState = .correct
-            }
-        } else {
-            errorHapticTrigger.toggle()
-            withAnimation {
-                guessState = .incorrect
-            }
-        }
-        
-        guessText = ""
-    }
 }
 
 //#Preview {

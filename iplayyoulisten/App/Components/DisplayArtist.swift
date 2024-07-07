@@ -19,23 +19,23 @@ struct DisplayArtist: View {
     }
     
     private func displayArtist() ->  String {
-        var hint: String = ""
+        var name: String = ""
         
         var empty: Bool = true
         
         for char in artistName {
             if !empty {
-                hint += " "
+                name += " "
             }
             
-            hint += String(char)
+            name += String(char)
             
             if empty {
                 empty = false
             }
         }
         
-        return hint
+        return name
     }
 }
 

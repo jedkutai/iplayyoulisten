@@ -6,13 +6,21 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct HistoryAlbumCell: View {
+    let album: AlbumModel
+    
+    let cellDimension: CGFloat = UIScreen.main.bounds.width / 4
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        KFImage(URL(string: album.artworkUnblurredUrl ?? album.artworkUrl))
+            .placeholder {
+                ProgressView()
+                    .frame(maxWidth: cellDimension, maxHeight: cellDimension)
+            }
+            .resizable()
+            .scaledToFit()
+            .frame(maxWidth: cellDimension, maxHeight: cellDimension)
     }
-}
-
-#Preview {
-    HistoryAlbumCell()
 }
